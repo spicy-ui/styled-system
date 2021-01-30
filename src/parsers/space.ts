@@ -1,6 +1,6 @@
 import { compose, get, Scale, system, SystemConfig } from '../core';
 import { RequiredTheme, ResponsiveValue, Theme, ThemeValue } from '../types';
-import { defaults, isNumber } from './utils';
+import { defaultTheme, isNumber } from '../utils';
 
 export function getMargin(n: any, scale?: Scale) {
   if (!isNumber(n)) {
@@ -70,67 +70,67 @@ const marginConfig: SystemConfig = {
     property: 'margin',
     scale: 'space',
     transform: getMargin,
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   marginTop: {
     property: 'marginTop',
     scale: 'space',
     transform: getMargin,
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   marginRight: {
     property: 'marginRight',
     scale: 'space',
     transform: getMargin,
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   marginBottom: {
     property: 'marginBottom',
     scale: 'space',
     transform: getMargin,
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   marginLeft: {
     property: 'marginLeft',
     scale: 'space',
     transform: getMargin,
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   marginX: {
     properties: ['marginLeft', 'marginRight'],
     scale: 'space',
     transform: getMargin,
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   marginY: {
     properties: ['marginTop', 'marginBottom'],
     scale: 'space',
     transform: getMargin,
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   marginBlockStart: {
     property: 'marginBlockStart',
     scale: 'space',
     transform: getMargin,
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   marginBlockEnd: {
     property: 'marginBlockEnd',
     scale: 'space',
     transform: getMargin,
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   marginInlineStart: {
     property: 'marginInlineStart',
     scale: 'space',
     transform: getMargin,
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   marginInlineEnd: {
     property: 'marginInlineEnd',
     scale: 'space',
     transform: getMargin,
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
 };
 
@@ -199,57 +199,57 @@ const paddingConfig: SystemConfig = {
   padding: {
     property: 'padding',
     scale: 'space',
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   paddingTop: {
     property: 'paddingTop',
     scale: 'space',
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   paddingRight: {
     property: 'paddingRight',
     scale: 'space',
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   paddingBottom: {
     property: 'paddingBottom',
     scale: 'space',
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   paddingLeft: {
     property: 'paddingLeft',
     scale: 'space',
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   paddingX: {
     properties: ['paddingLeft', 'paddingRight'],
     scale: 'space',
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   paddingY: {
     properties: ['paddingTop', 'paddingBottom'],
     scale: 'space',
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   paddingBlockStart: {
     property: 'paddingBlockStart',
     scale: 'space',
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   paddingBlockEnd: {
     property: 'paddingBlockEnd',
     scale: 'space',
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   paddingInlineStart: {
     property: 'paddingInlineStart',
     scale: 'space',
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   paddingInlineEnd: {
     property: 'paddingInlineEnd',
     scale: 'space',
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
 };
 

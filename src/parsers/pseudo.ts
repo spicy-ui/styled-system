@@ -1,4 +1,4 @@
-import { isObject, isFunction } from './utils';
+import { isFunction, isObject } from '../utils';
 
 export const pseudoSelectors = {
   _hover: '&:hover, &[data-hover]',

@@ -1,7 +1,7 @@
 import * as CSS from 'csstype';
 import { system, SystemConfig } from '../core';
 import { RequiredTheme, ResponsiveValue, Theme, TLengthStyledSystem } from '../types';
-import { defaults } from './utils';
+import { defaultTheme } from '../utils';
 
 export interface PositionProps<ThemeType extends Theme = RequiredTheme> {
   position?: ResponsiveValue<CSS.Property.Position, ThemeType>;
@@ -24,22 +24,22 @@ const config: SystemConfig = {
   top: {
     property: 'top',
     scale: 'space',
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   right: {
     property: 'right',
     scale: 'space',
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   bottom: {
     property: 'bottom',
     scale: 'space',
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   left: {
     property: 'left',
     scale: 'space',
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
 };
 

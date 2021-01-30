@@ -1,7 +1,7 @@
 import * as CSS from 'csstype';
 import { compose, system, SystemConfig } from '../core';
 import { RequiredTheme, ResponsiveValue, Theme, TLengthStyledSystem } from '../types';
-import { defaults } from './utils';
+import { defaultTheme } from '../utils';
 
 export interface GridProps<ThemeType extends Theme = RequiredTheme> {
   gridGap?: ResponsiveValue<CSS.Property.GridGap<TLengthStyledSystem>, ThemeType>;
@@ -25,32 +25,32 @@ const config: SystemConfig = {
   gridGap: {
     property: 'gridGap',
     scale: 'space',
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   gap: {
     property: 'gap',
     scale: 'space',
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   gridRowGap: {
     property: 'gridRowGap',
     scale: 'space',
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   rowGap: {
     property: 'rowGap',
     scale: 'space',
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   gridColumnGap: {
     property: 'gridColumnGap',
     scale: 'space',
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   columnGap: {
     property: 'columnGap',
     scale: 'space',
-    defaultScale: defaults.space,
+    defaultScale: defaultTheme.space,
   },
   gridRow: {
     property: 'gridRow',

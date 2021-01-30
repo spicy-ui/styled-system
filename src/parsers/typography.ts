@@ -1,7 +1,7 @@
 import * as CSS from 'csstype';
 import { system, SystemConfig } from '../core';
 import { RequiredTheme, ResponsiveValue, Theme, ThemeValue } from '../types';
-import { defaults } from './utils';
+import { defaultTheme } from '../utils';
 
 export interface TypographyProps<ThemeType extends Theme = RequiredTheme> {
   fontFamily?: ResponsiveValue<CSS.Property.FontFamily, ThemeType>;
@@ -26,7 +26,7 @@ const config: SystemConfig = {
   fontSize: {
     property: 'fontSize',
     scale: 'fontSizes',
-    defaultScale: defaults.fontSizes,
+    defaultScale: defaultTheme.fontSizes,
   },
   fontStyle: {
     property: 'fontStyle',

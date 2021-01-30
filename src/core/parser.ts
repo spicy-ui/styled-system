@@ -1,3 +1,4 @@
+import { defaultBreakpoints } from '../utils';
 import { Scale } from './types';
 import { get, merge, sort } from './util';
 
@@ -47,10 +48,6 @@ function parseResponsiveObject(
   return styles;
 }
 
-const defaults = {
-  breakpoints: [40, 52, 64].map((n) => `${n}em`),
-};
-
 export interface ParserCache {
   breakpoints?: Array<string>;
   media?: Array<null | string>;
@@ -83,7 +80,7 @@ export function createParser(config: any) {
 
       if (typeof raw === 'object') {
         cache.breakpoints =
-          (!isCacheDisabled && cache.breakpoints) || get(props.theme, 'breakpoints', defaults.breakpoints);
+          (!isCacheDisabled && cache.breakpoints) || get(props.theme, 'breakpoints', defaultBreakpoints);
 
         if (Array.isArray(raw)) {
           cache.media = (!isCacheDisabled && cache.media) || [null, ...(cache.breakpoints ?? []).map(createMediaQuery)];
