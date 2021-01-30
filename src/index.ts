@@ -12,6 +12,9 @@ export {
   SystemConfig,
 } from './core';
 
+// styled-system css
+export { css } from './css';
+
 // styled-system parsers
 export { background, BackgroundProps } from './parsers/background';
 export { border, BorderProps } from './parsers/border';
@@ -29,5 +32,5 @@ export { typography, TypographyProps } from './parsers/typography';
 // styled-system shouldForwardProp
 export { allProps, createShouldForwardProp, sfp, shouldForwardProp } from './shouldForwardProp';
 
-// types
+// shared types
 export * from './types';
