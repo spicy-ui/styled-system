@@ -12,11 +12,11 @@ export interface ColorProps<ThemeType extends Theme = RequiredTheme, TVal = Them
 const config: SystemConfig = {
   backgroundColor: {
     property: 'backgroundColor',
-    scale: 'color',
+    scale: 'colors',
   },
   color: {
     property: 'color',
-    scale: 'color',
+    scale: 'colors',
   },
   opacity: {
     property: 'opacity',

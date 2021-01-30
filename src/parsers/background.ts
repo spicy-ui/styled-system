@@ -22,7 +22,7 @@ export interface BackgroundProps<ThemeType extends Theme = RequiredTheme> {
 const config: SystemConfig = {
   background: {
     property: 'background',
-    scale: 'color',
+    scale: 'colors',
   },
   backgroundImage: {
     property: 'backgroundImage',
