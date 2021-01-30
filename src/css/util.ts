@@ -42,7 +42,7 @@ export function getParserDicts() {
       multiples[propName] = [...config.properties];
     }
 
-    if (config.transform?.name !== 'getValue') {
+    if (config.transform && config.transform?.name !== 'getValue') {
       transforms[propName] = config.transform;
     }
 
