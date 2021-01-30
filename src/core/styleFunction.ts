@@ -4,7 +4,10 @@ import { get } from './util';
 
 export interface StyleFn {
   (value: any, scale: Scale | undefined, props: any): any;
+  properties?: string[];
+  property?: string;
   scale?: string;
+  transform?: typeof get;
   defaults?: Scale;
 }
 
@@ -12,27 +15,23 @@ export interface CreateStyleFunctionArgs {
   property?: keyof CSS.Properties;
   properties?: Array<keyof CSS.Properties>;
   scale?: string;
-  transform?: (value: any, scale?: Scale, props?: any) => any;
+  transform?: typeof get;
   defaultScale?: Scale;
-}
-
-function getValue(n: any, scale?: Scale) {
-  return get(scale, n, n);
 }
 
 export function createStyleFunction({
   properties,
   property,
   scale,
-  transform = getValue,
+  transform = get,
   defaultScale,
 }: CreateStyleFunctionArgs): StyleFn {
   const p = properties || (property ? [property] : []);
 
-  const styleFn: StyleFn = (_value, _scale, _props) => {
+  const styleFn: StyleFn = (_value, _scale) => {
     const result: { [key in keyof CSS.Properties]: any } = {};
 
-    const value = transform(_value, _scale, _props);
+    const value = transform(_scale, _value);
 
     if (value === null) {
       return undefined;
@@ -45,7 +44,10 @@ export function createStyleFunction({
     return result;
   };
 
+  styleFn.properties = properties;
+  styleFn.property = property;
   styleFn.scale = scale;
+  styleFn.transform = transform;
   styleFn.defaults = defaultScale;
 
   return styleFn;

@@ -3,7 +3,7 @@ import { get, Scale, system, SystemConfig } from '../core';
 import { RequiredTheme, ResponsiveValue, Theme, TLengthStyledSystem } from '../types';
 import { isNumber } from '../utils';
 
-function getWidth(n: any, scale?: Scale) {
+function getWidth(scale?: Scale, n?: any) {
   return get(scale, n, !isNumber(n) || n > 1 ? n : `${n * 100}%`);
 }
 

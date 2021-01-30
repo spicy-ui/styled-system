@@ -1,4 +1,4 @@
-export function get(obj: any, path: string | number, fallback?: any) {
+export function get<T = any>(obj: any, path: string | number, fallback?: any): T {
   const key = typeof path === 'string' ? path.split('.') : [path];
 
   let result: any = obj;
