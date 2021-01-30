@@ -56,6 +56,7 @@ const config: SystemConfig = {
   },
   flexBasis: {
     property: 'flexBasis',
+    scale: 'sizes',
   },
   justifySelf: {
     property: 'justifySelf',
