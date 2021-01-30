@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-types */
-
 import * as CSS from 'csstype';
 import { ObjectOrArray } from './core';
 
