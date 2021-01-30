@@ -7,6 +7,7 @@ import { color } from '../parsers/color';
 import { extendedFlexbox } from '../parsers/flexbox';
 import { extendedGrid } from '../parsers/grid';
 import { layout } from '../parsers/layout';
+import { other } from '../parsers/other';
 import { position } from '../parsers/position';
 import { pseudoSelectors } from '../parsers/pseudo';
 import { shadow } from '../parsers/shadow';
@@ -25,6 +26,7 @@ const all = compose(
   extendedFlexbox,
   extendedGrid,
   layout,
+  other,
   position,
   shadow,
   space,
