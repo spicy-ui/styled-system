@@ -1,4 +1,5 @@
 import isPropValid from '@emotion/is-prop-valid';
+import memoize from '@emotion/memoize';
 import { compose } from '../core';
 import { background } from '../parsers/background';
 import { border } from '../parsers/border';
@@ -11,7 +12,6 @@ import { pseudoSelectors } from '../parsers/pseudo';
 import { shadow } from '../parsers/shadow';
 import { space } from '../parsers/space';
 import { typography } from '../parsers/typography';
-import { memoize } from './utils';
 
 export function createShouldForwardProp(props: string[]) {
   const regex = new RegExp(`^(${props.join('|')})$`);

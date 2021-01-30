@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.0.0",
+    "@emotion/memoize": "^0.7.5",
     "csstype": "^3.0.6"
   },
   "devDependencies": {
