@@ -2,6 +2,7 @@
 
 import { get } from '../core';
 import { pseudoSelectors } from '../parsers/pseudo';
+import { CSSObject, Theme } from '../types';
 import { defaultBreakpoints, defaultTheme, isFunction } from '../utils';
 import { getParserDicts } from './util';
 
@@ -11,7 +12,7 @@ function responsive(styles: any = {}) {
   return (theme: any) => {
     const result: any = {};
     const breakpoints = get(theme, 'breakpoints', defaultBreakpoints);
-    const mediaQueries = [null, ...breakpoints.map((n: any) => `@media screen and (min-width: ${n})`)]; // todo: does this support breakpoint objects??
+    const mediaQueries = [null, ...breakpoints.map((n: any) => `@media screen and (min-width: ${n})`)];
 
     Object.keys(styles).forEach((key) => {
       const value = isFunction(styles[key]) ? styles[key](theme) : styles[key];
@@ -48,8 +49,8 @@ function responsive(styles: any = {}) {
 }
 
 export function css(args?: any) {
-  return (props: any = {}) => {
-    const theme = { ...defaultTheme, ...(props.theme || props) };
+  return (props?: Theme | { theme: Theme }): CSSObject => {
+    const theme = { ...defaultTheme, ...((props as any)?.theme || props) };
 
     const result: any = {};
 
