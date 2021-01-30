@@ -24,3 +24,6 @@ export { pseudo, PseudoProps } from './parsers/pseudo';
 export { shadow, ShadowProps } from './parsers/shadow';
 export { space, SpaceProps } from './parsers/space';
 export { typography, TypographyProps } from './parsers/typography';
+
+// styled-system shouldForwardProp
+export { allProps, createShouldForwardProp, sfp, shouldForwardProp } from './shouldForwardProp';

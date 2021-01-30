@@ -29,6 +29,7 @@
     "test": "tsdx test"
   },
   "dependencies": {
+    "@emotion/is-prop-valid": "^1.0.0",
     "csstype": "^3.0.6"
   },
   "devDependencies": {
