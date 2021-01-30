@@ -10,8 +10,8 @@ function getWidth(scale?: Scale, n?: any) {
 export interface LayoutProps<ThemeType extends Theme = RequiredTheme> {
   width?: ResponsiveValue<CSS.Property.Width<TLengthStyledSystem>, ThemeType>;
   w?: ResponsiveValue<CSS.Property.Width<TLengthStyledSystem>, ThemeType>;
-  height: ResponsiveValue<CSS.Property.Height<TLengthStyledSystem>, ThemeType>;
-  h: ResponsiveValue<CSS.Property.Height<TLengthStyledSystem>, ThemeType>;
+  height?: ResponsiveValue<CSS.Property.Height<TLengthStyledSystem>, ThemeType>;
+  h?: ResponsiveValue<CSS.Property.Height<TLengthStyledSystem>, ThemeType>;
   minWidth?: ResponsiveValue<CSS.Property.MinWidth<TLengthStyledSystem>, ThemeType>;
   minW?: ResponsiveValue<CSS.Property.MinWidth<TLengthStyledSystem>, ThemeType>;
   maxWidth?: ResponsiveValue<CSS.Property.MaxWidth<TLengthStyledSystem>, ThemeType>;
