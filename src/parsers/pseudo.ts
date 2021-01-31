@@ -13,7 +13,7 @@ export const pseudoSelectors = {
   _after: '&::after',
   _empty: '&::empty',
   _expanded: '&[aria-expanded=true], &[data-expanded]',
-  _checked: '&[aria-checked=true], &[data-checked]',
+  _checked: '&:checked, &[aria-checked=true], &[data-checked]',
   _grabbed: '&[aria-grabbed=true], &[data-grabbed]',
   _pressed: '&[aria-pressed=true], &[data-pressed]',
   _invalid: '&[aria-invalid=true], &[data-invalid]',
