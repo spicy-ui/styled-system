@@ -14,11 +14,6 @@ import { space } from '../parsers/space';
 import { typography } from '../parsers/typography';
 import { pseudoSelectors } from '../pseudo';
 
-export function createShouldForwardProp(props: string[]) {
-  const regex = new RegExp(`^(${props.join('|')})$`);
-  return memoize((prop) => isPropValid(prop) && !regex.test(prop));
-}
-
 const all = compose(
   background,
   border,
@@ -39,14 +34,23 @@ const all = compose(
 export const allProps = [...all.propNames, ...Object.keys(pseudoSelectors)];
 
 /**
- * Creates a `shouldFowardProp` with all `@spicy-ui/styled-system` props and
- * allows you to add additional props to the `sfp` fn.
+ * Create a custom `shouldForwardProp` function.
+ * Use this when you don't want `@spicy-ui/styled-system` props included.
  */
-export function sfp(props: string[]) {
-  return createShouldForwardProp([...allProps, ...props]);
+export function createShouldForwardProp(props: string[]) {
+  const regex = new RegExp(`^(${props.join('|')})$`);
+  return memoize((prop) => isPropValid(prop) && !regex.test(prop));
 }
 
 /**
  * `shouldForwardProp` with all `@spicy-ui/styled-system` props.
  */
 export const shouldForwardProp = createShouldForwardProp(allProps);
+
+/**
+ * Creates a `shouldFowardProp` with all `@spicy-ui/styled-system` props.
+ * Also allows you to add additional props to the `sfp` fn.
+ */
+export function sfp(props: string[]) {
+  return createShouldForwardProp([...allProps, ...props]);
+}
