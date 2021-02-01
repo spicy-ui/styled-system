@@ -1,9 +1,11 @@
 import * as CSS from 'csstype';
 import { system, SystemConfig } from '../core';
-import { RequiredTheme, ResponsiveValue, Theme, ThemeValue } from '../types';
+import { RequiredTheme, ResponsiveValue, Theme, ThemeValue, TLengthStyledSystem } from '../types';
 
 export interface OtherProps<ThemeType extends Theme = RequiredTheme> {
   appearance?: ResponsiveValue<CSS.Property.Appearance, ThemeType>;
+  transform?: ResponsiveValue<CSS.Property.Transform, ThemeType>;
+  transformOrigin?: ResponsiveValue<CSS.Property.TransformOrigin<TLengthStyledSystem>, ThemeType>;
   visibility?: ResponsiveValue<CSS.Property.Visibility, ThemeType>;
   userSelect?: ResponsiveValue<CSS.Property.UserSelect, ThemeType>;
   pointerEvents?: ResponsiveValue<CSS.Property.PointerEvents, ThemeType>;
@@ -23,6 +25,12 @@ export interface OtherProps<ThemeType extends Theme = RequiredTheme> {
 const config: SystemConfig = {
   appearance: {
     property: 'appearance',
+  },
+  transform: {
+    property: 'transform',
+  },
+  transformOrigin: {
+    property: 'transformOrigin',
   },
   visibility: {
     property: 'visibility',
