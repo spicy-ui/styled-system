@@ -24,10 +24,13 @@ export { extendedGrid, ExtendedGridProps, grid, GridProps } from './parsers/grid
 export { layout, LayoutProps } from './parsers/layout';
 export { other, OtherProps } from './parsers/other';
 export { position, PositionProps } from './parsers/position';
-export { pseudo, PseudoProps } from './parsers/pseudo';
+export { pseudo } from './parsers/pseudo';
 export { shadow, ShadowProps } from './parsers/shadow';
 export { space, SpaceProps } from './parsers/space';
 export { typography, TypographyProps } from './parsers/typography';
+
+// pseudo props
+export { PseudoProps } from './pseudo';
 
 // styled-system shouldForwardProp
 export { allProps, createShouldForwardProp, sfp, shouldForwardProp } from './shouldForwardProp';

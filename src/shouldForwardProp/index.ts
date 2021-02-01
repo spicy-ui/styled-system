@@ -9,10 +9,10 @@ import { extendedGrid } from '../parsers/grid';
 import { layout } from '../parsers/layout';
 import { other } from '../parsers/other';
 import { position } from '../parsers/position';
-import { pseudoSelectors } from '../parsers/pseudo';
 import { shadow } from '../parsers/shadow';
 import { space } from '../parsers/space';
 import { typography } from '../parsers/typography';
+import { pseudoSelectors } from '../pseudo';
 
 export function createShouldForwardProp(props: string[]) {
   const regex = new RegExp(`^(${props.join('|')})$`);
