@@ -3,8 +3,6 @@ import { animation } from '../parsers/animation';
 import { background } from '../parsers/background';
 import { border } from '../parsers/border';
 import { color } from '../parsers/color';
-import { extendedFlexbox } from '../parsers/flexbox';
-import { extendedGrid } from '../parsers/grid';
 import { layout } from '../parsers/layout';
 import { other } from '../parsers/other';
 import { position } from '../parsers/position';
@@ -18,8 +16,6 @@ const all = compose(
   background,
   border,
   color,
-  extendedFlexbox,
-  extendedGrid,
   layout,
   other,
   position,
