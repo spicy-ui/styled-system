@@ -11,9 +11,10 @@
 While it is _almost_ a direct port of [styled-system](https://github.com/styled-system/styled-system) to TypeScript it does have a few minor changes.
 
 - `bg` is now for the `background` css property (but it still uses the `color` scale) and `bgColor` has been added
-- there are a bunch of new aliased props (e.g. `h` for `height`, `maxW` for `max-width`)
+- there are a bunch of new aliased props (e.g. `h` for `height`, `maxW` for `max-width`, etc)
 - there is an `extendedFlexbox` and `extendedGrid` parser which contains shorthands for `flexbox` and `grid` parsers (good for Flex and Grid components)
 - the `css` function now supports a collection of pseudo selectors (e.g. `_hover` for `&:hover`)
+- new `animation` and `transition` parsers (and scales) which are also rolled into the `css` function
 
 A major part that is incomplete in this package is the types (both exported and internal and particulary around the `css` export) - if you're able and willing to have a crack at them please do, it would be super appreciated to get some help on this.
 

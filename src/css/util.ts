@@ -1,4 +1,5 @@
 import { compose, StyleFn } from '../core';
+import { animation } from '../parsers/animation';
 import { background } from '../parsers/background';
 import { border } from '../parsers/border';
 import { color } from '../parsers/color';
@@ -9,9 +10,11 @@ import { other } from '../parsers/other';
 import { position } from '../parsers/position';
 import { shadow } from '../parsers/shadow';
 import { space } from '../parsers/space';
+import { transition } from '../parsers/transition';
 import { typography } from '../parsers/typography';
 
 const all = compose(
+  animation,
   background,
   border,
   color,
@@ -22,6 +25,7 @@ const all = compose(
   position,
   shadow,
   space,
+  transition,
   typography,
 );
 
