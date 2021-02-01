@@ -199,47 +199,6 @@ describe('css', () => {
     });
   });
 
-  // ('should return variants from theme', () => {
-  //   const result = css({
-  //     variant: 'buttons.primary',
-  //   })(theme);
-  //   expect(result).toEqual({
-  //     padding: 16,
-  //     fontWeight: 600,
-  //     color: 'white',
-  //     backgroundColor: 'tomato',
-  //     borderRadius: 2,
-  //   });
-  // });
-
-  // ('handles variants with responsive values', () => {
-  //   const result = css({
-  //     variant: 'text.caps',
-  //   })(theme);
-  //   expect(result).toEqual({
-  //     fontSize: 14,
-  //     letterSpacing: '0.1em',
-  //     textTransform: 'uppercase',
-  //     '@media screen and (min-width: 40em)': {
-  //       fontSize: 16,
-  //     },
-  //   });
-  // });
-
-  // ('handles responsive variants', () => {
-  //   const result = css({
-  //     variant: 'text.title',
-  //   })(theme);
-  //   expect(result).toEqual({
-  //     fontSize: 24,
-  //     letterSpacing: '-0.01em',
-  //     '@media screen and (min-width: 40em)': {
-  //       fontSize: 36,
-  //       letterSpacing: '-0.02em',
-  //     },
-  //   });
-  // });
-
   test('handles negative margins from scale', () => {
     const result = css({
       mt: -3,
